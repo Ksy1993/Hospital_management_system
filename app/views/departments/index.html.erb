@@ -1,0 +1,12 @@
+<table width="50%" cellpadding="3" cellspacing="3" border="3" bordercolor="black">
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+	</tr>
+	<%= @departments.each do |d| %>
+	<tr>
+		<td><%=d.id %></td>
+		<td><%=d.name %></td>
+	</tr>
+	<%end%>
+</table>
