@@ -1,0 +1,36 @@
+
+<table width="50%" cellpadding="3" cellspacing="3" border="3" bordercolor="black">
+	<caption><b>Doctor Details<br></caption>
+   <tr>
+   	  <th>ID</th>
+   	  <th>Name</th>
+   	  <th>Contact</th>
+      <th>Salary</th>
+      <th>Role</th>
+      <th>DoctorDetail</th>
+
+
+   	</tr>
+  <% @doctors.each do |doctor| %>
+  	<tr>
+      <td><%= doctor.id %></td>
+       <td><%= doctor.name %></td>
+        <td><%= doctor.contact_no %></td>
+        <td><%= doctor.salary %></td>
+        <td><%= doctor.department.name %></td>
+        <td class="links">
+            <%= link_to "show","/doctors/#{doctor.id}" %>
+            <%= link_to "Edit","/doctors/edit/#{doctor.id}" %>
+            <%= link_to "Delete","/doctors/destroy/#{doctor.id}" %>
+            <%= link_to "all patients",patients_path(id: doctor.id)%>
+
+          </td>
+    </tr>
+  <% end %>
+
+</table>
+<br>
+<br>
+<div class="links">
+<%= link_to "Add doctor" ,new_doctor_path %>
+</div>

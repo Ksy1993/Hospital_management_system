@@ -1,0 +1,28 @@
+
+<table width="50%" cellpadding="3" cellspacing="3" border="3" bordercolor="black">
+	<caption><b>Appointment<br></caption>
+   <tr>
+   	  <th>ID</th>
+      <th>DoctorName</th>
+      <th>PatientName</th>
+      <th>Date_Of_Appointment</th>
+   	  <th>Appointment Detail</th>
+   	  
+    </tr>
+  <% @appointments.each do |appointment| %>
+  	<tr>
+      <td><%= appointment.id %></td>
+      <td><%= appointment.doctor.name %></td>
+      <td><%= appointment.patient.name %></td>
+      <td><%= appointment.time%></td>
+      <td>
+          <%= link_to "Edit","/appointments/edit/#{appointment.id}" %>
+          <%= link_to "Delete","/appointments/destroy/#{appointment.id}" %>
+      </td>
+    </tr>
+  <% end %>
+
+</table>
+<br>
+<br>
+<%= link_to "Create New Appointment","/appointments/new" %>

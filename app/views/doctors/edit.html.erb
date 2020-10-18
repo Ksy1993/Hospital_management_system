@@ -1,0 +1,8 @@
+
+<%= form_for @doctor do |d| %>
+Name: <%= d.text_field :name %><br>
+<br>Contact: <%= d.text_field :contact_no %><br>
+<br>Address: <%= d.text_field :address %><br>
+<br>Salary: <%= d.text_field :salary %><br><br>
+<br><%= d.submit%>
+<% end %>

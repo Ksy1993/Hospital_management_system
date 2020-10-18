@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_of_appointment: 2020-10-18 21:08:11
+  doctor: one
+  patient: one
+  time: 2020-10-18 21:08:11
+
+two:
+  date_of_appointment: 2020-10-18 21:08:11
+  doctor: two
+  patient: two
+  time: 2020-10-18 21:08:11

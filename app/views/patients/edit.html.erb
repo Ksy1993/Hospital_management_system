@@ -1,0 +1,8 @@
+<%= form_for @patient do |p| %>
+Name: <%= p.text_field :name %><br>
+<br>Age: <%= p.text_field :age%><br>
+<br>Address: <%= p.text_field :address %><br>
+<br>Contact: <%= p.text_field :contact %><br>
+<br>Gender: <%= p.text_field :gender %><br><br>
+<br><%= p.submit%>
+<% end %>

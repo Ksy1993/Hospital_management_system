@@ -3,10 +3,11 @@
 		<th>Id</th>
 		<th>Name</th>
 	</tr>
-	<%= @departments.each do |d| %>
+	<% @departments.each do |d| %>
 	<tr>
 		<td><%=d.id %></td>
 		<td><%=d.name %></td>
 	</tr>
 	<%end%>
 </table>
+<%= link_to "Create Department", new_department_path %>
